@@ -3,7 +3,6 @@ const router = express.Router()
 const connection = require('./mysql')
 const bcrypt = require('bcrypt')
 
-// GET users (ไม่ส่ง password)
 router.get('/users', (req, res) => {
 
     const sql = `
@@ -22,7 +21,6 @@ router.get('/users', (req, res) => {
 })
 
 
-// POST create user
 router.post('/users', async (req, res) => {
 
     const {
